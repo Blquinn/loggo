@@ -60,16 +60,8 @@ func runExecutableSubcommand(cmdName string) func(cmd *cobra.Command, args []str
 
 var executableCommands = map[string]*cobra.Command{
 	cmdGcpStream: {
-		Use:   cmdGcpStream,
-		Short: "Continuously stream GCP stack driver logs",
-		Long: `Continuously stream Google Cloud Platform log entries
-from a given selected project and GCP logging filters:
-
-	loggo gcp-stream \ 
-            --project myGCPProject123 \
-            --from 1m \
-            --filter 'resource.labels.namespace_name="awesome-sit" AND resource.labels.container_name="some"' 
-`,
+		Use:                cmdGcpStream,
+		Short:              "Continuously stream GCP stack driver logs",
 		DisableFlagParsing: true,
 		Run:                runExecutableSubcommand(cmdGcpStream),
 	},

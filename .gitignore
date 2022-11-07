@@ -6,8 +6,8 @@
 *.dylib
 main
 .idea
-loggo
-loggo-gcp-stream
+./loggo
+./loggo-gcp-stream
 internal/testdata/log.txt
 dist/
 # Test binary, built with `go test -c`
